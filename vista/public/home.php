@@ -20,14 +20,14 @@ $usuario = $_SESSION['usuario'] ?? null;
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>🍭 Golosinas - Tienda Dulce</title>
+    <title>🍭 Golosinas - Fioramonti</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <style> </style>
 </head>
 <link rel="stylesheet" href="assets/css/estilos.css">
 <body>
     <header>
-        <h1>🍭 Golosineria Fioramonti</h1>
+        <h1>🍭 Golosineria Fioramonti 🍭</h1>
         <nav>
             <a href="index.php">Inicio</a>
             <a href="index.php?accion=carrito">🛒 Carrito</a>

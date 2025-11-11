@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro - Golosinas</title>
+    <title>Registro - Golosineria Fioramonti</title>
     <link rel="stylesheet" href="assets/css/estilos.css">
     <style>
         body {

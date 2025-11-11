@@ -5,7 +5,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Iniciar Sesión - Tienda de Golosinas</title>
+    <title>Iniciar Sesión - Golosineria Fioramonti</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -127,7 +127,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 </head>
 <body>
     <header>
-        <h1>🍬 Tienda de Golosinas 🍬</h1>
+        <h1>🍭 Golosineria Fioramonti 🍭</h1>
         <nav>
             <a href="index.php">Inicio</a>
             <a href="index.php?accion=carrito">Carrito</a>
