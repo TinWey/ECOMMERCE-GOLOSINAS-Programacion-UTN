@@ -22,9 +22,8 @@ $usuario = $_SESSION['usuario'] ?? null;
     <meta charset="UTF-8">
     <title>🍭 Golosinas - Fioramonti</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-    <style> </style>
+    <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
-<link rel="stylesheet" href="assets/css/estilos.css">
 <body>
     <header>
         <h1>🍭 Golosineria Fioramonti 🍭</h1>
@@ -32,7 +31,7 @@ $usuario = $_SESSION['usuario'] ?? null;
             <a href="index.php">Inicio</a>
             <a href="index.php?accion=carrito">🛒 Carrito</a>
             <?php if ($usuario): ?>
-                <a href="#">👋 Hola, <?= $usuario; ?></a>
+                <a href="#">👋 Hola, <?= htmlspecialchars($usuario); ?></a>
                 <a href="index.php?accion=logout">Cerrar sesión</a>
             <?php else: ?>
                 <a href="index.php?accion=login">Iniciar sesión</a>
@@ -47,17 +46,22 @@ $usuario = $_SESSION['usuario'] ?? null;
                 <img src="assets/img/<?= $p['imagen']; ?>" alt="Imagen de <?= $p['nombre']; ?>">
                 <b><?= $p['nombre']; ?></b>
                 <div class="precio">$<?= $p['precio']; ?></div>
-                <form action="index.php" method="get">
-                    <input type="hidden" name="accion" value="agregar">
-                    <input type="hidden" name="id" value="<?= $p['id']; ?>">
-                    <button type="submit" class="btn-agregar">Agregar 🛍️</button>
-                </form>
+
+                <?php if ($usuario): ?>
+                    <form action="index.php" method="get">
+                        <input type="hidden" name="accion" value="agregar">
+                        <input type="hidden" name="id" value="<?= $p['id']; ?>">
+                        <button type="submit" class="btn-agregar">Agregar 🛍️</button>
+                    </form>
+                <?php else: ?>
+                    <div class="aviso-login">Inicia sesión para comprar 🔒</div>
+                <?php endif; ?>
             </div>
         <?php endforeach; ?>
     </main>
 
     <footer>
-         Tienda de Golosinas 🍬 - Hecho por Thiago V. Fioramonti
+        Tienda de Golosinas 🍬 - Hecho por Thiago V. Fioramonti
     </footer>
 </body>
 </html>
